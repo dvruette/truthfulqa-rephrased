@@ -76,7 +76,6 @@ async def parallel_complete(args, samples, prompt_template, max_retries=10):
                 raise
         return None
 
-        
     sample_lens = [len(x) for x in samples]
     flat_samples = [x for y in samples for x in y]
     tasks = [complete(x) for x in flat_samples]
